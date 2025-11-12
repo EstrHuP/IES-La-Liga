@@ -1,6 +1,17 @@
-.carousel-caption:hover {
+.carousel-item:hover {
   background-color: rgba(0, 0, 0, 0.7);
   cursor: pointer;
   transform: scale(1.02);
   transition: all 0.3s ease-in-out;
+}
+
+.card-img-top {
+    max-height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-body {
+    padding: 10%;
+    text-align: center;
 }
