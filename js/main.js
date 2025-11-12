@@ -109,3 +109,22 @@ document.querySelectorAll('.more-info-btn').forEach(btn => {
         teamModal.show();
     });
 });
+
+// ==========================================
+// Filter results
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+
+  const filterSelect = document.getElementById('competitionFilter');
+
+  filterSelect.addEventListener('change', () => {
+    const filteredValue = filterSelect.value;
+    document.querySelectorAll('.competition-result').forEach(div => {
+      if (filteredValue === 'all' || div.classList.contains(filteredValue)) {
+        div.style.display = '';
+      } else {
+        div.style.display = 'none';
+      }
+    });
+  });
+});

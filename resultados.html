@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- My CSS style -->
+     <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>La Liga</title>
+  </head>
+  <body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <!-- Logo img -->
+            <a class="navbar-brand col-lg-3 me-0 justify-content-lg-center" href="index.html">
+                <img src="assetss/la-liga.png" width="200"/>
+            </a>
+            <!-- Responsive button collapsable -->
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Nav sections -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+              <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="equipos.html">Equipos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="resultados.html">Resultados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Clasificaciones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Jugadores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Árbitros</a>
+                </li>
+            </ul>
+            <!-- Contact btn -->
+            <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+                <button class="btn btn-primary">Contacto</button>
+            </div>
+            </div>
+        </div>
+    </nav>
+   </header>
+   <main>
+   <div class="container mt-5">
+        <div class="filter d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold mb-3">Filtrar equipos por competición:</h2>
+            <select id="competitionFilter" class="form-select w-auto">
+                <option value="all">Todas las competiciones</option>
+                <option value="footballOption">Fútbol</option>
+                <option value="basketOption">Baloncesto</option>
+                <option value="volleyOption">Voleibol</option>
+            </select>
+        </div>
+        <div class="results-list">     
+            <!-- Football -->
+            <div class="competition-result footballOption">
+            <h4>Fútbol - Jornada 1</h4>
+            <table class="table table-bordered">
+                <thead class="table-light">
+                <tr>
+                    <th>Local</th>
+                    <th>Visitante</th>
+                    <th>Resultado</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Barcelona</td>
+                    <td>Valencia</td>
+                    <td>2 - 1</td>
+                </tr>
+                <tr>
+                    <td>Athletic Club</td>
+                    <td>Sevilla</td>
+                    <td>0 - 0</td>
+                </tr>
+                <tr>
+                    <td>Valencia</td>
+                    <td>Barcelona</td>
+                    <td>4 - 0</td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <!-- Basket -->
+            <div class="competition-result basketOption">
+            <h4>Baloncesto - Jornada 1</h4>
+            <table class="table table-bordered">
+                <thead class="table-light">
+                <tr>
+                    <th>Local</th>
+                    <th>Visitante</th>
+                    <th>Resultado</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Toledo</td>
+                    <td>Charlotte Hornets</td>
+                    <td>89 - 92</td>
+                </tr>
+                <tr>
+                    <td>Baskonia</td>
+                    <td>Valencia Basket</td>
+                    <td>78 - 80</td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <!-- Volleyball -->
+            <div class="competition-result volleyOption">
+            <h4>Voleibol - Jornada 1</h4>
+            <table class="table table-bordered">
+                <thead class="table-light">
+                <tr>
+                    <th>Local</th>
+                    <th>Visitante</th>
+                    <th>Resultado</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Los Titanes</td>
+                    <td>Baskonia</td>
+                    <td>3 - 1</td>
+                </tr>
+                <tr>
+                    <td>Baskonia</td>
+                    <td>Los Titanes</td>
+                    <td>2 - 3</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</main>
+ <!-- ================================ -->
+  <!-- Footer -->
+  <footer class="bg-light text-black mt-5 pt-4 pb-4">
+  <div class="container">
+    <div class="row">
+      <!-- Email -->
+      <div class="col-md-4 mb-3">
+        <h5>Contacto</h5>
+        <p>Email: <a href="mailto:laliga@iesmaestrecalatrava.com" class="text-black">laliga@iesmaestrecalatrava.com</a></p>
+        <p>Teléfono: +34 123 456 789</p>
+      </div>
+      <!-- Legal texts -->
+      <div class="col-md-4 mb-3">
+        <h5>Legal</h5>
+        <a href="#" class="text-black d-block">Aviso de Privacidad</a>
+        <a href="#" class="text-black d-block">Política de Cookies</a>
+        <a href="#" class="text-black d-block">Términos y Condiciones</a>
+      </div>
+      <!-- Social media -->
+      <div class="col-md-4 mb-3">
+        <h5>Redes Sociales</h5>
+        <a href="https://www.instagram.com"><img src="assetss/instagram.png" width="40"></a>
+        <a href="https://www.facebook.com"><img src="assetss/facebook.png" width="40"></a>
+        <a href="https://www.x.com"><img src="assetss/X_icon.png" width="40"></a>
+      </div>
+    </div>
+    <div class="text-center mt-6">
+      <small>&copy; 2025 Centro Educativo. Todos los derechos reservados.</small>
+    </div>
+  </div>
+  </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- My JS -->
+     <script src="js/main.js"></script>
+  </body>
+</html>
