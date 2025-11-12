@@ -128,3 +128,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// ============================
+// Filter classifications
+// ============================
+document.addEventListener('DOMContentLoaded', () => {
+  const filter = document.getElementById('competitionFilter');
+  const results = document.querySelectorAll('.classification-result');
+
+  filter.addEventListener('change', () => {
+    const selected = filter.value;
+
+    results.forEach(div => {
+      if (selected === 'all' || div.classList.contains(selected)) {
+        div.style.display = '';
+      } else {
+        div.style.display = 'none';
+      }
+    });
+  });
+});
