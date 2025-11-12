@@ -4,7 +4,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const carouselElement = document.querySelector('#newsCarousel');
     const carousel = document.getElementById('newsCarousel');
-    const carouselInstance = bootstrap.carousel.getOrCreateInstance(carousel);
+    const carouselInstance = bootstrap.Carousel.getOrCreateInstance(carousel);
 
     document.querySelectorAll('.modal').forEach(modal => {
         modal.addEventListener('show.bs.modal', () => carouselInstance.pause());
@@ -145,6 +145,43 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         div.style.display = 'none';
       }
+    });
+  });
+});
+
+// ============================
+// Search player filter
+// ============================
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('playerSearch');
+  const competitionFilter = document.getElementById('competitionFilter');
+  const players = document.querySelectorAll('.player-card');
+
+  function filterPlayers() {
+    const searchValue = searchInput.value.toLowerCase();
+    const selectedCompetition = competitionFilter.value;
+
+    players.forEach(card => {
+      const name = card.querySelector('.card-title').textContent.toLowerCase();
+      const matchesSearch = name.includes(searchValue);
+      const matchesCompetition = selectedCompetition === 'all' || card.classList.contains(selectedCompetition);
+
+      card.style.display = (matchesSearch && matchesCompetition) ? '' : 'none';
+      });
+    }
+
+    searchInput.addEventListener('input', filterPlayers);
+    competitionFilter.addEventListener('change', filterPlayers);
+
+// ============================
+// Dynamic modal
+// ============================
+  document.querySelectorAll('.view-player-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.getElementById('playerName').textContent = btn.dataset.name;
+      document.getElementById('playerTeam').textContent = btn.dataset.team;
+      document.getElementById('playerSport').textContent = btn.dataset.sport;
+      document.getElementById('playerStats').textContent = btn.dataset.stats;
     });
   });
 });
