@@ -1,0 +1,22 @@
+// ==========================
+// Variables personalizadas
+// ==========================
+
+// Cambiar colores principales
+$primary: #007A3F;
+$secondary: #FF751F;
+$tertiary: #0097B2; 
+
+// Cambiar fondo claro y oscuro
+$light: #f1f1f1;   // nuevo bg-light
+$dark: #0d1b2a;    // nuevo bg-dark
+
+// Cambiar otros colores si quieres
+$success: #2a9d8f;
+$warning: #fcbf49;
+$danger: #e63946;
+
+// ==========================
+// Importar Bootstrap (después)
+// ==========================
+@import "../node_modules/bootstrap/scss/bootstrap";

@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     if (carouselElement) {
-        const carousel = new bootstrap.carousel(carouselElement, {
+        const carousel = new bootstrap.Carousel(carouselElement, {
             interval: 5000,
             ride: 'carousel',
             pause: 'hover',
@@ -213,23 +213,20 @@ document.addEventListener('DOMContentLoaded', () => {
 // ============================
 // Dynamic modal
 // ============================
-document.querySelectorAll('.ref-card').forEach(card => {
-  card.addEventListener('click', () => {
-    // Obtener los datos directamente del div.ref-card
-    const name = card.dataset.name;
-    const sport = card.dataset.sport;
-    const stats = card.dataset.stats;
-    const exp = card.dataset.exp;
+  document.querySelectorAll('.ref-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const name = card.dataset.name;
+      const sport = card.dataset.sport;
+      const stats = card.dataset.stats;
+      const exp = card.dataset.exp;
 
-    // Insertar datos en la modal
-    document.getElementById('refName').textContent = name;
-    document.getElementById('refSport').textContent = sport;
-    document.getElementById('refStats').textContent = stats;
-    document.getElementById('refExp').textContent = exp;
+      document.getElementById('refName').textContent = name;
+      document.getElementById('refSport').textContent = sport;
+      document.getElementById('refStats').textContent = stats;
+      document.getElementById('refExp').textContent = exp;
 
-    // Mostrar modal
-    const modal = new bootstrap.Modal(document.getElementById('refModal'));
-    modal.show();
+      const modal = new bootstrap.Modal(document.getElementById('refModal'));
+      modal.show();
+    });
   });
-});
 });

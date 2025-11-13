@@ -1,8 +1,16 @@
+.navbar-brand img {
+  width: 200px;
+}
+
 .carousel-item:hover {
   background-color: rgba(0, 0, 0, 0.7);
   cursor: pointer;
   transform: scale(1.02);
   transition: all 0.3s ease-in-out;
+}
+
+.carousel-item img {
+    max-height: 800px;
 }
 
 .card-img-top {
@@ -34,4 +42,9 @@
   transform: scale(1.05);
   z-index: 10;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ref-card img {
+    max-width: 300px;
+    max-height: 300px;
 }
