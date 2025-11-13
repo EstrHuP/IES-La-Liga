@@ -57,12 +57,12 @@
 <!-- Main content -->
   <main>
     <div class="container mt-5">
-      <h2 class="fw-bold mb-4 text-center">Búsqueda de jugadores</h2>
+      <h2 class="fw-bold mb-4 text-center">Búsqueda de árbitros</h2>
 
       <!-- Filtros -->
       <div class="row mb-4">
         <div class="col-md-6">
-          <input type="text" id="playerSearch" class="form-control" placeholder="Buscar jugador por nombre...">
+          <input type="text" id="refSearch" class="form-control" placeholder="Buscar árbitro por nombre...">
         </div>
         <div class="col-md-6">
           <select id="competitionFilter" class="form-select">
@@ -75,97 +75,74 @@
       </div>
 
       <!-- Lista de jugadores -->
-      <div id="playersList" class="row g-4">
+      <div id="refList" class="row g-4">
         <!-- Fútbol -->
-        <div class="col-md-3 player-card footballOption" data-player="elena">
+        <div class="col-md-4 ref-card footballOption" data-ref="juanjo">
           <div class="card bg-light">
             <div class="card-body">
-              <h2 class="card-title fw-bold">Elena Suarez</h2>
-              <img src="assetss/elena.webp" class="card-img-top" alt="Jugadora Elena de Barcelona">
-              <h3>Barcelona</h3>
-              <p class="card-text">Fútbol</p>
-              <button class="btn btn-primary btn-sm view-player-btn"
+              <h2 class="card-title fw-bold">Juanjo Soto</h2>
+              <img src="assetss/juanjo.png" class="card-img-top" alt="Árbitro de Fútbol, Juanjo Soto">
+              <button class="btn btn-primary btn-sm view-ref-btn"
                       data-bs-toggle="modal"
-                      data-bs-target="#playerModal"
-                      data-name="Elena Suarez"
-                      data-team="Barcelona"
+                      data-bs-target="#refModal"
+                      data-name="Juanjo Soto"
                       data-sport="Fútbol"
-                      data-stats="Partidos: 14, Goles: 4, Asistencias: 8">Ver detalles</button>
+                      data-stats="12"
+                      data-exp="15 años">Ver detalles</button>
             </div>
           </div>
         </div>
 
-        <div class="col-md-3 player-card footballOption" data-player="carlos">
+        <!-- Basket -->
+        <div class="col-md-4 ref-card basketOption" data-ref="ricardo">
           <div class="card bg-light">
             <div class="card-body">
-              <h2 class="card-title fw-bold">Carlos Gonzalez</h2>
-              <img src="assetss/carlos.webp" class="card-img-top" alt="Jugador Carlos de Valencia">
-              <h3>Valencia</h3>
-              <p class="card-text">Fútbol</p>
-              <button class="btn btn-primary btn-sm view-player-btn"
+              <h2 class="card-title fw-bold">Ricardo Nuñez</h2>
+              <img src="assetss/ricardo.png" class="card-img-top" alt="Árbitro de baloncesto, Ricardo Nuñez">
+              <button class="btn btn-primary btn-sm view-ref-btn"
                       data-bs-toggle="modal"
-                      data-bs-target="#playerModal"
-                      data-name="Carlos Gonzalez"
-                      data-team="Barcelona"
-                      data-sport="Fútbol"
-                      data-stats="Partidos: 10, Goles: 2, Asistencias: 5">Ver detalles</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Baloncesto -->
-        <div class="col-md-3 player-card basketOption" data-player="elena">
-          <div class="card bg-light">
-            <div class="card-body">
-              <h2 class="card-title fw-bold">Manuel Sevilla</h2>
-              <img src="assetss/manuel.png" class="card-img-top" alt="Jugador Manuel de Toledo Baloncesto">
-              <h3>Toledo Baloncesto</h3>
-              <p class="card-text">Baloncesto</p>
-              <button class="btn btn-primary btn-sm view-player-btn"
-                      data-bs-toggle="modal"
-                      data-bs-target="#playerModal"
-                      data-name="Manuel Sevilla"
-                      data-team="Toledo Baloncesto"
+                      data-bs-target="#refModal"
+                      data-name="Ricardo Nuñez"
                       data-sport="Baloncesto"
-                      data-stats="Partidos: 6, Puntos: 80, Asistencias: 6">Ver detalles</button>
+                      data-stats="4"
+                      data-exp="2 años">Ver detalles</button>
             </div>
           </div>
         </div>
 
         <!-- Voleibol -->
-        <div class="col-md-3 player-card volleyOption" data-player="sara">
+        <div class="col-md-4 ref-card volleyOption" data-ref="publicarán">
           <div class="card bg-light">
             <div class="card-body">
-              <h2 class="card-title fw-bold">Sara Pérez</h2>
-              <img src="assetss/sara.webp" class="card-img-top" alt="Jugadora Sara de Los Titanes">
-              <h3>Los Titanes</h3>
-              <p class="card-text">Voleibol</p>
-              <button class="btn btn-primary btn-sm view-player-btn"
+              <h2 class="card-title fw-bold">Pilar Calvo</h2>
+              <img src="assetss/pilar.jpg" class="card-img-top" alt="Árbitro de voleibol, Pilar Calvo">
+              <button class="btn btn-primary btn-sm view-ref-btn"
                       data-bs-toggle="modal"
-                      data-bs-target="#playerModal"
-                      data-name="Sara Pérez"
-                      data-team="Los Titanes"
+                      data-bs-target="#refModal"
+                      data-name="Pilar Calvo"
                       data-sport="Voleibol"
-                      data-stats="Partidos: 8, Puntos: 20, Asistencias: 6">Ver detalles</button>
+                      data-stats="6"
+                      data-exp="10 años">Ver detalles</button>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </main>
 
-  <!-- Modal Detalles Jugador -->
-  <div class="modal fade" id="playerModal" tabindex="-1" aria-hidden="true">
+  <!-- Modal Detalles Arbitro -->
+  <div class="modal fade" id="refModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header bg-primary text-white">
-          <h5 class="modal-title" id="playerName">Jugador seleccionado</h5>
+          <h5 class="modal-title" id="refName">Árbitro seleccionado</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-          <p><strong>Equipo:</strong> <span id="playerTeam"></span></p>
-          <p><strong>Deporte:</strong> <span id="playerSport"></span></p>
-          <p><strong>Estadísticas:</strong> <span id="playerStats"></span></p>
+            <p><strong>Deporte:</strong> <span id="refSport"></span></p>
+            <p><strong>Partidos arbitrados:</strong> <span id="refStats"></span></p>
+            <p><strong>Experiencia profesional:</strong> <span id="refExp"></span></p>
         </div>
       </div>
     </div>

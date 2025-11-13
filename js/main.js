@@ -185,3 +185,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// ============================
+// Search ref filter
+// ============================
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('refSearch');
+  const competitionFilter = document.getElementById('competitionFilter');
+  const players = document.querySelectorAll('.ref-card');
+
+  function filterRefs() {
+    const searchValue = searchInput.value.toLowerCase();
+    const selectedCompetition = competitionFilter.value;
+
+    players.forEach(card => {
+      const name = card.querySelector('.card-title').textContent.toLowerCase();
+      const matchesSearch = name.includes(searchValue);
+      const matchesCompetition = selectedCompetition === 'all' || card.classList.contains(selectedCompetition);
+
+      card.style.display = (matchesSearch && matchesCompetition) ? '' : 'none';
+      });
+    }
+
+    searchInput.addEventListener('input', filterRefs);
+    competitionFilter.addEventListener('change', filterRefs);
+
+// ============================
+// Dynamic modal
+// ============================
+  document.querySelectorAll('.view-ref-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.getElementById('refName').textContent = btn.dataset.name;
+      document.getElementById('refExp').textContent = btn.dataset.exp;
+      document.getElementById('refSport').textContent = btn.dataset.sport;
+      document.getElementById('refStats').textContent = btn.dataset.stats;
+    });
+  });
+});
