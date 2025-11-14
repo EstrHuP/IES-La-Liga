@@ -47,10 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==========================================
 const teamsData = {
     barcelona: [
-        { nombre: 'Manolo Espina', posicion: 'Delantero', capitan: 'Sí' },
-        { nombre: 'Elena Suarez', posicion: 'Portera', capitan: 'No' },
-        { nombre: 'Christian Fernandez', posicion: 'Defensa', capitan: 'No' },
-        { nombre: 'Marta Soto', posicion: 'Defensa', capitan: 'No' },
+        { nombre: 'Jugador 1', posicion: 'Delantero', capitan: 'Si' },
+        { nombre: 'Jugador 2', posicion: 'Defensa', capitan: 'No' },
+        { nombre: 'Jugador 3', posicion: 'Portero', capitan: 'No' },
+        { nombre: 'Jugador 4', posicion: 'Defensa', capitan: 'No' },
     ],
     athletic: [
         { nombre: 'Jugador 1', posicion: 'Delantero', capitan: 'No' },
@@ -63,6 +63,36 @@ const teamsData = {
         { nombre: 'Jugador 2', posicion: 'Defensa', capitan: 'No' },
         { nombre: 'Jugador 3', posicion: 'Portero', capitan: 'No' },
         { nombre: 'Jugador 4', posicion: 'Defensa', capitan: 'No' },
+    ],
+    sevilla: [
+        { nombre: 'Jugador 1', posicion: 'Delantero', capitan: 'No' },
+        { nombre: 'Jugador 2', posicion: 'Defensa', capitan: 'No' },
+        { nombre: 'Jugador 3', posicion: 'Portero', capitan: 'Si' },
+        { nombre: 'Jugador 4', posicion: 'Defensa', capitan: 'No' },
+    ],
+    toledo: [
+        { nombre: 'Jugador 1', posicion: 'Base', capitan: 'No' },
+        { nombre: 'Jugador 2', posicion: 'Escolta', capitan: 'Si' },
+        { nombre: 'Jugador 3', posicion: 'Alero', capitan: 'No' },
+        { nombre: 'Jugador 4', posicion: 'Centro', capitan: 'No' },
+    ],
+    charlotte: [
+        { nombre: 'Jugador 1', posicion: 'Base', capitan: 'Si' },
+        { nombre: 'Jugador 2', posicion: 'Escolta', capitan: 'No' },
+        { nombre: 'Jugador 3', posicion: 'Alero', capitan: 'No' },
+        { nombre: 'Jugador 4', posicion: 'Centro', capitan: 'No' },
+    ],
+    baskonia: [
+        { nombre: 'Jugador 1', posicion: 'Espalda derecho', capitan: 'No' },
+        { nombre: 'Jugador 2', posicion: 'Delantero derecho', capitan: 'No' },
+        { nombre: 'Jugador 3', posicion: 'Delantero izquierdo', capitan: 'No' },
+        { nombre: 'Jugador 4', posicion: 'Lateral izquierdo', capitan: 'Si' },
+    ],
+    titanes: [
+        { nombre: 'Jugador 1', posicion: 'Espalda derecho', capitan: 'Si' },
+        { nombre: 'Jugador 2', posicion: 'Delantero derecho', capitan: 'No' },
+        { nombre: 'Jugador 3', posicion: 'Delantero izquierdo', capitan: 'No' },
+        { nombre: 'Jugador 4', posicion: 'Lateral izquierdo', capitan: 'No' },
     ],
 };
 
