@@ -270,17 +270,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const toastElement = document.getElementById('toastInscripcion');
   const toast = new bootstrap.Toast(toastElement, { delay: 3000 });
 
-  // Focus al abrir modal
+  // Focus
   modalInscripcion.addEventListener('shown.bs.modal', () => {
     formInscripcion.querySelector('input, select, textarea').focus();
   });
 
-  // Reset al cerrar modal
+  // Reset form when is closed
   modalInscripcion.addEventListener('hidden.bs.modal', () => {
     formInscripcion.reset();
   });
 
-  // Mostrar toast al enviar
+  // Show toast and close modal when data is sending
   formInscripcion.addEventListener('submit', (e) => {
     e.preventDefault();
     toast.show();

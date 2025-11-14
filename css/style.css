@@ -1,5 +1,38 @@
+:root {
+  --primary-color: #002313;
+  --secondary-color: #007A3F;
+  --tertiary-color: #FF751F;
+  --quaternary-color: #0097B2;
+}
+
+.btn-primary {
+  background: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--tertiary-color) !important;
+  border-color: var(--tertiary-color) !important;
+}
+
+.btn-outline-primary {
+  text-decoration-color: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+  color: var(--secondary-color) !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--tertiary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+}
+
 .navbar-brand img {
   width: 200px;
+}
+
+.navbar {
+  background-color: var(--primary-color) !important;
 }
 
 .carousel-item:hover {
@@ -57,4 +90,13 @@
 .ref-card img {
     max-width: 300px;
     max-height: 300px;
+}
+
+.modal-header {
+  background: var(--primary-color) !important;
+  color: white;
+}
+
+.footer-content {
+  background: var(--primary-color) !important;
 }
