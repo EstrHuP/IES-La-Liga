@@ -44,6 +44,16 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+.player-card .card {
+  transition: all 0.3s ease;
+}
+
+.player-card:hover .card {
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
 .ref-card img {
     max-width: 300px;
     max-height: 300px;

@@ -206,12 +206,15 @@ document.addEventListener('DOMContentLoaded', () => {
 // ============================
 // Dynamic modal
 // ============================
-  document.querySelectorAll('.view-player-btn').forEach(btn => {
+  document.querySelectorAll('.player-card').forEach(btn => {
     btn.addEventListener('click', () => {
       document.getElementById('playerName').textContent = btn.dataset.name;
       document.getElementById('playerTeam').textContent = btn.dataset.team;
       document.getElementById('playerSport').textContent = btn.dataset.sport;
       document.getElementById('playerStats').textContent = btn.dataset.stats;
+
+      const modal = new bootstrap.Modal(document.getElementById('playerModal'));
+      modal.show();
     });
   });
 });
