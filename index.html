@@ -156,7 +156,7 @@
         <h1 class="display-5 fw-bold lh-1 mb-3">Apostamos por el deporte</h1>
         <p class="lead">La asociación de padres del centro, cree que el deporte es lo prioritario para el desarrollo físico de cada niño. Es por ello que se ha construido el proyecto llamado: "Deporte".<br><br> ¡No te lo pienses, aún estás a tiempo de participar!</p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <a href="#" type="button" class="btn btn-primary btn-lg px-4">Inscribirse</a>
+          <button class="btn btn-primary btn-lg px-4" data-bs-toggle="modal" data-bs-target="#modalInscripcion">Inscribirse</a>
         </div>
       </div>
     </div>
@@ -179,11 +179,11 @@
             <div class="card-body">
               <h5 class="card-title text-primary fw-bold">Liga de Fútbol Escolar</h5>
               <p class="card-text">12 equipos compiten por el trofeo anual. La temporada se extiende de octubre a marzo.</p>
-              <p class="text-muted small">Próxima jornada: 15 de noviembre</p>
+              <p class="text-muted small">Próxima jornada: 15 de noviembre.</p>
             </div>
             <div class="card-footer bg-transparent border-0 d-flex justify-content-between">
               <a href="resultados.html" class="btn btn-primary btn-sm">Ver resultados</a>
-              <a href="#" class="btn btn-outline-primary btn-sm">Inscribirse</a>
+              <a href="#" class="btn btn-outline-primary btn-sm">Contacto</a>
             </div>
           </div>
         </div>
@@ -195,10 +195,11 @@
             <div class="card-body">
               <h5 class="card-title text-primary fw-bold">Liga de Baloncesto</h5>
               <p class="card-text">Participa en la competición más reñida. Equipos femeninos compitiendo por ser el mejor centro.</p>
+              <p class="text-muted small">Echa un vistazo a los equipos.</p>
             </div>
             <div class="card-footer bg-transparent border-0 d-flex justify-content-between">
-              <a href="clasificaciones.html" class="btn btn-primary btn-sm">Clasificación</a>
-              <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalNew2"> Más info</button>
+              <a href="equipos.html" class="btn btn-primary btn-sm">Ver equipos</a>
+              <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalNew2">Saber más</button>
             </div>
           </div>
         </div>
@@ -210,16 +211,57 @@
             <div class="card-body">
               <h5 class="card-title text-primary fw-bold">Torneo de voleibol</h5>
               <p class="card-text">El torneo más emocionante del año. Equipos mixtos compitiendo por la copa de invierno.</p>
+              <p class="text-muted small">¡Ya están los resultados!</p>
             </div>
             <div class="card-footer bg-transparent border-0 d-flex justify-content-between">
               <a href="resultados.html" class="btn btn-primary btn-sm">Ver resultados</a>
-              <a href="#" class="btn btn-outline-primary btn-sm">Inscribirse</a>
+              <a href="#" class="btn btn-outline-primary btn-sm">Contacto</a>
             </div>
           </div>
         </div>
       </div>
     </section>
- </main>
+<!-- Modal de inscripción -->
+<div class="modal fade" id="modalInscripcion" tabindex="-1" aria-labelledby="modalInscripcionLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="modalInscripcionLabel">Formulario de Inscripción</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <form id="formInscripcion">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" id="nombre" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="equipo" class="form-label">Estoy interesado/a en:</label>
+            <select class="form-select" id="equipo" required>
+              <option value="">Selecciona deporte</option>
+              <option value="futbol">Liga de Fútbol</option>
+              <option value="baloncesto">Liga de Baloncesto</option>
+              <option value="voleibol">Torneo de Voleibol</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar inscripción</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Toast de confirmación -->
+  <div class="toast align-items-center" id="toastInscripcion" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body"> ¡Tu formulario ha sido enviado con éxito! </div>
+      <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</main>
  <!-- ================================ -->
   <!-- Footer -->
   <footer class="footer-content text-black mt-5 pt-4 pb-4 bg-light">

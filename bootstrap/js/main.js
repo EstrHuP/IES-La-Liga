@@ -263,3 +263,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const modalInscripcion = document.getElementById('modalInscripcion');
+  const formInscripcion = document.getElementById('formInscripcion');
+  const toastElement = document.getElementById('toastInscripcion');
+  const toast = new bootstrap.Toast(toastElement, { delay: 3000 });
+
+  // Focus al abrir modal
+  modalInscripcion.addEventListener('shown.bs.modal', () => {
+    formInscripcion.querySelector('input, select, textarea').focus();
+  });
+
+  // Reset al cerrar modal
+  modalInscripcion.addEventListener('hidden.bs.modal', () => {
+    formInscripcion.reset();
+  });
+
+  // Mostrar toast al enviar
+  formInscripcion.addEventListener('submit', (e) => {
+    e.preventDefault();
+    toast.show();
+    formInscripcion.reset();
+    const modal = bootstrap.Modal.getInstance(modalInscripcion);
+    modal.hide();
+  });
+});
